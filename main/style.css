@@ -105,6 +105,7 @@ h1.head-title{
 }
 
 h1.head-title.b{
+    font-family: "Abril Fatface",cursive;
     color: black;
     font-size: 1.25rem;
 }
@@ -219,7 +220,7 @@ section.landing-page{
     max-width: 94.375rem; /* when page zoom is .8*/
 
 
-    background-image: linear-gradient(rgba(33, 59, 176, 0.7),rgba(33, 59, 176, 0.7)),url('../images/landing-page-1.jpg.jpg');
+    background-image: linear-gradient(rgba(33, 59, 176, 0.7),rgba(33, 59, 176, 0.7)),url('images/landing-page-1.jpg.jpg');
     background-position: center;
     background-size: cover;
 }   
@@ -351,7 +352,7 @@ p.title{
 
 /* about CSS */
 
-section.about-section{
+.about-section{
     padding: 12rem 0 4rem 0;
 }
 
@@ -496,6 +497,11 @@ section.about-section{
     padding: 6rem 0;
 }
 
+.doctors .container{
+    display: flex;
+    flex-direction: column;
+}
+
 .doctor-cards{
     margin: 4rem 0 3rem;
     display: grid;
@@ -510,22 +516,30 @@ section.about-section{
 .doctor-cards > *{
     background-color: whitesmoke;
     width: 100%;
-    border-radius: .65rem;
+    border-radius: 1.2rem;
     /* padding: 1.25rem; */
     box-shadow:  0 0 10px rgba(185, 185, 185, 0.438);
     border: 1px solid rgba(30, 91, 196, 0.098);
 }
 
+.designation{
+    padding: 0;
+}
 .doc-card > img{
     border-radius: .65rem;
     object-fit: cover;
     aspect-ratio: 1/1.2;
     object-position: center;
+    z-index: 1;
 }
 
-.doc-card > *:nth-child(2){
+.designation{
     padding: 1.25rem 0;
 }
+
+/* .doc-card > *:nth-child(2){
+    padding: 1.25rem 0;
+} */
 
 .doctors .contact{
     display: flex;
@@ -608,6 +622,7 @@ section.about-section{
 }
 
 .news .container{
+    max-width: 65rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -655,6 +670,157 @@ input[type="submit"]{
     font-size: .85rem;
     font-weight: 400;
 }
+
+
+/* media queries */
+
+@media(max-width: 768px){
+
+    h1.heading{
+        font-size: 2rem;
+    }
+
+    h1.head-title{
+        font-size: 1.35rem;
+    }
+
+    h1.head-title.b{
+        font-size: 1.5rem;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .landing-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .landing-flex-cards{
+        scale: .7;
+    }
+
+    .landing-image{
+        display: none;
+    }
+
+    .about-section{
+        padding: 11rem 0 5rem;
+    }
+
+    .about-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .about-img{
+        display: none;
+    }
+
+    .about-text p.text{
+        text-align: center;
+    }
+    .check-box{
+        padding: 2.3rem 0 3.5rem;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .check-box > *{
+        padding: 0 1rem;
+    }
+    .check-box img{
+        margin-right: .65rem;
+    }
+    .about-text .contact{
+        justify-content: center;
+    }
+
+
+
+    .service-section{
+        padding: 2rem 0;
+    }
+    .service-cards{
+        margin: 2rem 0 0;
+        scale: .95;
+        grid-template-columns: repeat(2,minmax(250px,300px));
+        gap: 1.55rem
+    }
+    .srv-card{
+        padding: 3.2rem 0;
+    }
+
+    .srv-card img{
+        scale: 1.25;
+        padding-bottom: 2rem;
+    }
+
+    :is(.srv-card:nth-child(5),.srv-card:nth-child(6)) img{
+        padding-bottom: 2rem;
+    }
+
+    .srv-card p.text{
+        display: none;
+    }
+
+
+    .doctors{
+        padding: 3rem 0;
+    }
+
+    .doctor-cards{
+        margin:3rem 0;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        gap: 3rem;
+        /* scale: .85; */
+    }
+
+    .doc-card > img{
+        height: 30rem;
+        border-radius: 1.2rem 1.2rem 0 0;
+    }
+
+    .doc-card{
+        width: 37rem;
+    }
+
+    .doc-card:nth-child(2) > img{
+        object-position: 0 -2rem;
+    }
+
+    .designation{
+        padding: 1.25rem 2rem;
+    }
+
+    .designation h1.head-title.b{
+        font-size: 2rem;
+    }
+    .designation p.title{
+        font-size: 1.25rem;
+    }
+
+    .doctors .contact{
+        display: none;
+    }
+
+
+    .experties{
+        display: none;
+    }
+
+
+
+
+    .news .container{
+        flex-direction: column;
+    }
+
+    .news form{
+        scale: .75;
+    }
+}   
+
 
 
 
