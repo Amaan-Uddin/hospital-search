@@ -557,7 +557,7 @@ p.title{
     margin: 4rem 0;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    column-gap: 2rem;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
 }
@@ -628,7 +628,7 @@ p.title{
     justify-content: space-between;
     padding: 2rem 2.5rem;
     border-radius: 1rem;
-    box-shadow:  0 0 10px rgba(185, 185, 185, 0.438);
+    box-shadow:  0 0 10px #b9b9b970;
     border: 1px solid rgba(30, 91, 196, 0.098);
 }
 
@@ -696,8 +696,12 @@ input[type="submit"]{
         grid-template-columns: 1fr;
     }
 
+    .landing-flex{
+        top: -9rem;
+    }
     .landing-flex-cards{
-        scale: .7;
+        display: grid;
+        grid-template-columns: repeat(2,minmax(150px,1fr));
     }
 
     .landing-image{
@@ -705,7 +709,7 @@ input[type="submit"]{
     }
 
     .about-section{
-        padding: 11rem 0 5rem;
+        padding: 20rem 0 5rem;
     }
 
     .about-grid{
@@ -723,11 +727,13 @@ input[type="submit"]{
         padding: 2.3rem 0 3.5rem;
         flex-direction: row;
         justify-content: center;
+        font-size: .85rem;
     }
     .check-box > *{
         padding: 0 1rem;
     }
     .check-box img{
+        max-width: 1.5rem;
         margin-right: .65rem;
     }
     .about-text .contact{
@@ -773,16 +779,17 @@ input[type="submit"]{
         flex-direction: column;
         text-align: start;
         gap: 3rem;
+        padding: 0 1.25rem;
         /* scale: .85; */
     }
 
     .doc-card > img{
-        height: 30rem;
+        max-height: 30rem;
         border-radius: 1.2rem 1.2rem 0 0;
     }
 
     .doc-card{
-        width: 37rem;
+        max-width: 37rem;
     }
 
     .doc-card:nth-child(2) > img{
@@ -810,10 +817,17 @@ input[type="submit"]{
     }
 
 
+    .blog-cards{
+        margin: 3rem 0;
+        grid-template-columns: 1fr;
+        padding: 0 1.25rem;
+    }
+
 
 
     .news .container{
         flex-direction: column;
+        display: none;
     }
 
     .news form{
