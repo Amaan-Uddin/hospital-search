@@ -62,7 +62,7 @@ img{
 }
 
 .btn{
-    background-color: #2348f0;
+    background-color: #2349f0;
     color: white;
     font-weight: 600;
     letter-spacing: .8px;
@@ -73,11 +73,11 @@ img{
     border-radius: 5px;
 }
 
-.btn.secondary-btn{
-    border: 1px solid #2348f0;
-    background-color: transparent;
-    color: #2348f0;
-}
+/* .btn.secondary-btn{
+    border: 1px solid #2348f0; */
+    /* background-color: transparent; */
+    /* color: #2348f0;
+} */
 
 
 h1.heading{
@@ -116,6 +116,12 @@ h1.head-title.b{
     column-gap: 4rem;
     height: 100%;
     max-height: 30rem;
+}
+
+.about-text,.mission-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-img,.expert-img{
@@ -168,6 +174,7 @@ header{
 
 
 .logo{
+    z-index: 2;
     padding: 0 1.5rem;
     font-family: 'Cinzel',serif;
     font-size: 2.5rem;
@@ -180,13 +187,15 @@ nav.container{
     /* open dev tools and apply to understand */
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
+    justify-content: space-between;}
 
 .links{
     display: flex;
     /* justify-content: center; */
+    align-items: center;
     width: 100%;
+    /* max-width: 30rem; */
+    max-width: 52rem;
 
     /* width: inherit;  inherits the witdth of the container  */
     /* you can also chose -webkit-fill-available */
@@ -208,6 +217,19 @@ nav.container{
 
 nav.container .contact{
     margin: 2rem;
+}
+
+.ham-bar{
+    z-index: 2;
+    display: none;
+    font-size: 2.5rem;
+    color: #2348f0;
+    cursor: pointer;
+    line-height: 110px;
+}
+
+#check{
+    display: none;
 }
 
 /* landing page CSS */
@@ -301,7 +323,7 @@ section.landing-page{
     position: relative;
     top: -5.75rem;
     z-index: 1;
-
+    scale: .95;
     display: flex;
     justify-content: center;
 }
@@ -356,15 +378,7 @@ p.title{
     padding: 12rem 0 4rem 0;
 }
 
-
-.about-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-
-.about-text p.text{
+:is(.about-text,.mission-text) p.text{
     color: rgb(100, 100, 100);
     padding-top: 2rem;
 }
@@ -390,7 +404,7 @@ p.title{
 /* service CSS */
 
 .service-section{
-    padding: 7rem 0;
+    padding: 3rem 0;
 }
 
 .service-section .container{
@@ -446,16 +460,20 @@ p.title{
 .experties{
     padding: 4rem 0;
 }
+
 .expert-grid{
     margin: 3rem 0 0;
 }
 
 .expert-cards{
-    display: grid;
-    grid-template-columns: repeat(2,250px);
-    align-items: center;
-    justify-self: center;
+    margin: 4rem 0;
+    display: flex;
+    width: 100%;
     gap: 2rem;
+    /* grid-template-columns: repeat(3,250px); */
+    align-items: center;
+    /* justify-self: center; */
+    justify-content: center;
     flex: 1;
 }
 
@@ -472,14 +490,20 @@ p.title{
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 1.75rem 0;
+    max-width: 370px;
+    padding: 1.75rem 2rem;
 }
 
 .exp-card > h1.head-title.b{
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-family: "Poppins",sans-serif;
     padding: 2rem 0 0;
 }
 
+.exp-card > p.text{
+    padding: 1rem 0;
+    text-align: center;
+}
 .exp-card-img{
     display: flex;
     align-items: center;
@@ -494,7 +518,7 @@ p.title{
 /* doctors CSS */
 
 .doctors{
-    padding: 6rem 0;
+    padding: 2rem 0 5rem;
 }
 
 .doctors .container{
@@ -654,7 +678,7 @@ input{
 }
 input[type="email"]{
     padding: 1.2rem;
-    width: 18rem;
+    max-width: 18rem;
     background-color: whitesmoke;
     margin-right: 1rem;
     font-size: .95rem;
@@ -688,12 +712,51 @@ input[type="submit"]{
         font-size: 1.5rem;
     }
 
+    .logo{
+        font-size: 1.85rem;
+    }
+    
+    nav.container{
+        flex-wrap: wrap;
+    }
+
+    .ham-bar{
+        padding-right: 2rem;
+        display: block;
+        order: 2;
+    }
+/* 
+    #check:checked ~ .links{
+    } */
+
     .links{
-        display: none;
+        border-top: 1px solid #9daebf74;
+        position: relative;
+        transform: translateY(-10rem);
+        max-width: 36rem;
+        margin: 0 auto;
+        z-index: 1;
+        background-color: white;
+        order: 3;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        transition: .5s;
+    }
+    .links > li{
+        padding-top: 2rem;
+    }
+    
+    nav.container .contact{
+        align-items: center;
     }
 
     .landing-grid{
         grid-template-columns: 1fr;
+    }
+
+    .landing-text .contact{
+        justify-content: center;
     }
 
     .landing-flex{
@@ -704,6 +767,15 @@ input[type="submit"]{
         grid-template-columns: repeat(2,minmax(150px,1fr));
     }
 
+    .denomination,.denomination span{
+        font-size: 1.85rem;
+    }
+
+    .denomination span{
+        padding-left: .15rem;
+        top: -1px;
+    }
+
     .landing-image{
         display: none;
     }
@@ -712,15 +784,15 @@ input[type="submit"]{
         padding: 20rem 0 5rem;
     }
 
-    .about-grid{
+    .about-grid,.expert-grid{
         grid-template-columns: 1fr;
     }
 
-    .about-img{
+    .about-img,.expert-img{
         display: none;
     }
 
-    .about-text p.text{
+    :is(.about-text,.mission-text) p.text{
         text-align: center;
     }
     .check-box{
@@ -743,7 +815,7 @@ input[type="submit"]{
 
 
     .service-section{
-        padding: 2rem 0;
+        padding: 5rem 0 0rem;
     }
     .service-cards{
         margin: 2rem 0 0;
@@ -770,11 +842,11 @@ input[type="submit"]{
 
 
     .doctors{
-        padding: 3rem 0;
+        padding: 2rem 0;
     }
 
     .doctor-cards{
-        margin:3rem 0;
+        margin:4rem 0;
         display: flex;
         flex-direction: column;
         text-align: start;
@@ -801,10 +873,10 @@ input[type="submit"]{
     }
 
     .designation h1.head-title.b{
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
     .designation p.title{
-        font-size: 1.25rem;
+        font-size: .75rem;
     }
 
     .doctors .contact{
@@ -813,21 +885,37 @@ input[type="submit"]{
 
 
     .experties{
-        display: none;
+        padding: 0 0 6rem;
+    }
+    .expert-cards{
+        flex-direction: column;
+    }
+
+    .exp-card{
+        max-width: 400px;
     }
 
 
     .blog-cards{
-        margin: 3rem 0;
+        margin: 4rem 0;
         grid-template-columns: 1fr;
         padding: 0 1.25rem;
     }
 
+    .blog-content h1.head-title.b{
+        font-size: 1.2rem;
+    }
+    .blog-content p.text{
+        font-size: .75rem;
+    }
+
+    .read-time{
+        font-size: .75rem;
+    }
 
 
     .news .container{
         flex-direction: column;
-        display: none;
     }
 
     .news form{

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Search</title>
+    <title>Mana Aarogya</title>
 
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
 
@@ -17,15 +18,19 @@
         <nav class="container">
             <div class="logo">AROGAYA</div>
             <ul class="links">
-                <li><a href="" class="nav-links">home</a></li>
+                <li><a href="index.html" class="nav-links">home</a></li>
+                <li><a href="hospital.html" class="nav-links">hospitals</a></li>
                 <li><a href="" class="nav-links">about</a></li>
-                <li><a href="" class="nav-links">services</a></li>
-                <li><a href="" class="nav-links">doctors</a></li>
                 <li><a href="" class="nav-links">blogs</a></li>
+                <!-- <li><a href="" class="nav-links">blogs</a></li> -->
+                <div class="contact">
+                    <a href="" class="btn">contact</a>
+                </div>
             </ul>
-            <div class="contact">
-                <a href="" class="btn">contact</a>
-            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="ham-bar">
+                <i class="uil uil-bars hamburger"></i>
+            </label>
         </nav>
     </header>
 
@@ -38,8 +43,7 @@
                         <h1 class="heading">Exceptional Health Care for Everyone</h1>
                         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, odit temporibus. Quis omnis sed adipisci.</p>
                         <div class="contact">
-                            <a href="" class="btn">get appointment</a>
-                            <a href="" class="btn secondary-btn">learn more</a>
+                            <a href="" class="btn">get started</a>
                         </div>
                     </div>
                     <div class="landing-image">
@@ -96,75 +100,31 @@
                         <img src="images\about-section.jpg" alt="">
                     </div>
                     <div class="about-text">
-                        <h1 class="heading">about our hospital</h1>
+                        <h1 class="heading">our vision</h1>
                         <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate inventore, quos eos quis dolor nobis expedita suscipit reprehenderit veritatis veniam!</p>
                         <div class="check-box">
                             <div><i><img src="icons\check.png" alt=""></i>browse our website</div>
                             <div><i><img src="icons\check.png" alt=""></i>choose service</div>
                             <div><i><img src="icons\check.png" alt=""></i>send message</div>
                         </div>
-                        <div class="contact">
+                        <!-- <div class="contact">
                             <a href="" class="btn">learn more</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="service-section">
-            <div class="container">
-                <h1 class="heading">our hospital services</h1>
-                <div class="service-cards">
-                    <div class="srv-card">
-                        <img src="icons\srv-doctor.png" alt="">
-                        <h1 class="head-title">expert doctor</h1>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
-                    </div>
-                    <div class="srv-card">
-                        <img src="icons\srv-diagnosis.png" alt="">
-                        <h1 class="head-title">diagnosis</h1>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
-                    </div>
-                    <div class="srv-card">
-                        <img src="icons\srv-patho.png" alt="">
-                        <h1 class="head-title">pathology</h1>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
-                    </div>
-                    <div class="srv-card">
-                        <img src="icons\srv-dental.png" alt="">
-                        <h1 class="head-title">dental care</h1>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
-                    </div>
-                    <div class="srv-card">
-                        <img src="icons\srv-cardio.png" alt="">
-                        <h1 class="head-title">cardiology</h1>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
-                    </div>
-                    <div class="srv-card">
-                        <img src="icons\srv-meds.png" alt="">
-                        <h1 class="head-title">medicine</h1>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
-                    </div>
-                    <div class="srv-card">
-                        <img src="icons\srv-neuro.png" alt="">
-                        <h1 class="head-title">neurology</h1>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
-                    </div>
-                    <div class="srv-card">
-                        <img src="icons\srv-ambulance.png" alt="">
-                        <h1 class="head-title">ambulance</h1>
-                        <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
         <section class="experties">
             <div class="container">
-                <h1 class="heading">our experties</h1>
                 <div class="expert-grid">
-                    <div class="expert-cards">
-                        <div class="exp-card">
+                    <div class="mission-text">
+                        <h1 class="heading">our mission</h1>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae neque sit repellat? Sed provident, suscipit quos quam, pariatur quibusdam laudantium iure repellendus veritatis cupiditate, maiores perferendis magni dolorum ab sunt.</p>
+                    </div>
+                    <!--<div class="expert-cards">
+                         <div class="exp-card">
                             <div class="exp-card-img">
                                 <img src="icons\exp-doctor.png" alt="">
                             </div>
@@ -187,14 +147,112 @@
                                 <img src="icons\srv-ambulance.png" alt="">
                             </div>
                             <h1 class="head-title b">ambulance</h1>
-                        </div>
-                    </div>
+                        </div> 
+                    </div>-->
                     <div class="expert-img">
                         <img src="images\expert-section.jpg" alt="">
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="service-section">
+            <div class="container">
+                <h1 class="heading">our services</h1>
+                <div class="expert-cards">
+                        <div class="exp-card">
+                        <div class="exp-card-img">
+                            <img src="icons\exp-doctor.png" alt="">
+                        </div>
+                        <h1 class="head-title b">certified doctors</h1>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quasi.</p>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-card-img">
+                            <img src="icons\exp-call.png" alt="">
+                        </div>
+                        <h1 class="head-title b">emergency</h1>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quasi.</p>
+                    </div>
+                    <div class="exp-card">
+                        <div class="exp-card-img">
+                            <img src="icons\exp-heart.png" alt="">
+                        </div>
+                        <h1 class="head-title b">technology</h1>
+                        <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quasi.</p>
+                </div>
+            <!-- <div class="service-cards">
+                <div class="srv-card">
+                    <img src="icons\srv-doctor.png" alt="">
+                    <h1 class="head-title">expert doctor</h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
+                </div>
+                <div class="srv-card">
+                    <img src="icons\srv-diagnosis.png" alt="">
+                    <h1 class="head-title">diagnosis</h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
+                </div>
+                <div class="srv-card">
+                    <img src="icons\srv-patho.png" alt="">
+                    <h1 class="head-title">pathology</h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
+                </div>
+                <div class="srv-card">
+                    <img src="icons\srv-dental.png" alt="">
+                    <h1 class="head-title">dental care</h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
+                </div>
+                <div class="srv-card">
+                    <img src="icons\srv-cardio.png" alt="">
+                    <h1 class="head-title">cardiology</h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
+                </div>
+                <div class="srv-card">
+                    <img src="icons\srv-meds.png" alt="">
+                    <h1 class="head-title">medicine</h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
+                </div>
+                <div class="srv-card">
+                    <img src="icons\srv-neuro.png" alt="">
+                    <h1 class="head-title">neurology</h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
+                </div>
+                <div class="srv-card">
+                    <img src="icons\srv-ambulance.png" alt="">
+                    <h1 class="head-title">ambulance</h1>
+                    <p class="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque fuga ab eaque</p>
+                </div>
+            </div> -->
+            </div>
+        </section> -->
+
+                    <!--<div class="expert-cards">
+                         <div class="exp-card">
+                            <div class="exp-card-img">
+                                <img src="icons\exp-doctor.png" alt="">
+                            </div>
+                            <h1 class="head-title b">certified doctors</h1>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-card-img">
+                                <img src="icons\exp-call.png" alt="">
+                            </div>
+                            <h1 class="head-title b">emergency</h1>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-card-img">
+                                <img src="icons\exp-heart.png" alt="">
+                            </div>
+                            <h1 class="head-title b">technology</h1>
+                        </div>
+                        <div class="exp-card">
+                            <div class="exp-card-img">
+                                <img src="icons\srv-ambulance.png" alt="">
+                            </div>
+                            <h1 class="head-title b">ambulance</h1>
+                        </div> 
+                    </div>-->
+
 
         <section class="doctors">
             <div class="container">
