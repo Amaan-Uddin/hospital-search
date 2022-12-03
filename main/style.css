@@ -16,6 +16,10 @@ font-family: 'Satisfy', cursive;
     box-sizing: border-box;
 }
 
+:focus{
+    outline: none;
+}
+
 body{
     font-family: "Poppins",sans-serif;
     -webkit-tap-highlight-color: transparent;
@@ -204,7 +208,6 @@ nav.container{
 }
 
 
-
 .links > *{
     display: flex;
     justify-content: center;
@@ -217,9 +220,9 @@ nav.container{
     /* margin: 0 .35rem; */
 }
 
-nav.container .contact{
+/* nav.container .contact{
     margin: 2rem;
-}
+} */
 
 .ham-bar{
     z-index: 2;
@@ -711,10 +714,16 @@ input[type="submit"]{
     align-items: flex-end;
     justify-content: center;
     padding: 3rem 0;
+    height: 18rem;
     border-radius: .85rem;
     box-shadow: 0 0 10px rgba(211, 211, 211, 0.7);
-
+    transition: .5s;
 }
+
+.hospital-card:hover{
+    scale: 1.07;
+}
+
 
 .hospital-card:nth-child(1){
     background-image: url("images/mul-spec.jpg");
@@ -746,6 +755,91 @@ h1.hospital.heading::after{
 }
 
 
+.multispec-search{
+    margin: 3rem 0;
+    display: flex;
+    padding: 0 3rem;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.multispec-search form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 25rem;
+    display: flex;
+    border-radius: 10rem;
+    border: 1px solid rgba(218, 216, 216, 0.431);
+}
+
+.search-icon{
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="search"]{
+    /* border: 1px solid rgba(218, 216, 216, 0.431); */
+    width: 100%;
+    max-width: 22rem;
+    height: 2.25rem;
+    border-radius: 10rem;
+    padding: 1.25rem;
+    font-family: "Poppins",sans-serif;
+}
+
+
+h1.m-s.heading{
+    font-size: 1.85rem;
+    color: #2348f0;
+}
+h1.m-s.heading::after{
+    display: none;
+}
+
+.hospital-container{
+    margin: 4rem 0;
+}
+
+.hospital-tag{
+    background-color: whitesmoke;
+    margin: 0 3rem;
+    display: flex;
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+.hospital-head{
+    width: -webkit-fill-available;
+    padding: 1.25rem 2rem;
+}
+
+.drop-down{
+    display: flex;
+    align-items: center;
+    width: 10rem;
+    font-size: 3rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hospital-head > h1.head-title{
+    color: #2348f0;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.hospital-img{
+    width: 20rem;
+}
+.hospital-img > img{
+    border-radius: 1rem  0 0 1rem;
+}
 
 
 /* media queries */
@@ -973,6 +1067,16 @@ h1.hospital.heading::after{
     .news form{
         scale: .75;
     }
+
+    
+    .hospital-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .hospital-card:hover{
+        scale: none;
+    }
+
 }   
 
 
