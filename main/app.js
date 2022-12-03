@@ -2,16 +2,6 @@
 const hamburger = document.querySelector(".ham-bar")
 const links = document.querySelector(".links")
 let counter = 0
-let x = window.matchMedia("(min-width: 769px)")
-
-// while(!counter){
-//     x.addEventListener("Media",() => {
-//         if(x.matches){
-//             links.style.opacity = "1"
-//         }
-//     })
-// }
-
 
 hamburger.addEventListener("click",() => {
     if(!counter){
