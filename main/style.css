@@ -194,6 +194,7 @@ nav.container{
     /* justify-content: center; */
     align-items: center;
     width: 100%;
+    opacity: 1;
     /* max-width: 30rem; */
     max-width: 52rem;
 
@@ -201,6 +202,7 @@ nav.container{
     /* you can also chose -webkit-fill-available */
 
 }
+
 
 
 .links > *{
@@ -694,6 +696,56 @@ input[type="submit"]{
     font-size: .85rem;
     font-weight: 400;
 }
+
+
+.hospital-grid{
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(300px,1fr));
+    gap: 2rem;  
+    height: 40rem;  
+}
+
+.hospital-card{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 3rem 0;
+    border-radius: .85rem;
+    box-shadow: 0 0 10px rgba(211, 211, 211, 0.7);
+
+}
+
+.hospital-card:nth-child(1){
+    background-image: url("images/mul-spec.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.hospital-card:nth-child(2){
+    background-image: url("images/government.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.hospital-card:nth-child(3){
+    background-image: url("images/affordable.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.hospital-card:nth-child(4){
+    background-image: url("images/high-end.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+h1.hospital.heading{
+    color: white;
+    padding-top: 3rem;
+} 
+h1.hospital.heading::after{
+    display: none;
+}
+
+
 
 
 /* media queries */
